@@ -1,4 +1,4 @@
-# Practica 1:
+# Practica 1: BLINK 
 En esta primera práctica junto con la microcontrolador ESP32 y un led, tendremos como objetivo producir el parpadeo del LED.
 
 Diagrama codi basic:
