@@ -43,7 +43,7 @@ Serial.println("OFF");
 delay(DELAY);
 }
 ```
-En este código modificado hemos añadido los puertos de salida ON y OFF, con las funciones sugeridas en la práctica (Serial.printIN), aparte de esta modificación tambien se ha cambiado el tiempo de espera 500 a 1000 milisegundos.
+En este código modificado hemos añadido los puertos de salida ON y OFF, con las funciones sugeridas en la práctica (Serial.printIN), aparte de esta modificación tambien se ha cambiado el tiempo de espera de 500 a 1000 milisegundos.
 
 # 3. Modificar programa para que actue en los registros de entrada de salida.
 
