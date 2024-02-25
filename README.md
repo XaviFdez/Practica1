@@ -9,3 +9,28 @@ Los diagramas de flujo y estado solo se hacen del código básico
 ```mermaid
 stateDiagra
 ```
+```c++
+#include <Arduino.h>
+
+#define LED_BUILTIN 23
+#define DELAY 1000 //ms
+
+
+void setup() {
+Serial.begin(115200); 
+pinMode(LED_BUILTIN, OUTPUT);
+
+}
+
+void loop() {
+    
+digitalWrite(LED_BUILTIN, HIGH);
+
+Serial.println("ON"); 
+delay(DELAY);
+digitalWrite(LED_BUILTIN, LOW);
+
+Serial.println("OFF"); 
+delay(DELAY);
+}
+```
