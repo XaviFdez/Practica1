@@ -94,3 +94,4 @@ stateDiagra
 ```
 # 4. Medir frecuencia máxima 
 ```
+----Añadir lo del osciloscopio gráfica y comentarla
