@@ -52,7 +52,6 @@ En este código modificado hemos añadido los puertos de salida ON y OFF, con la
 #define LED_BUILTIN 23
 #define DELAY 1000
 
-// Dirección base del registro de salida GPIO (ajusta esto según la documentación de tu placa)
 #define GPIO_OUT_REG 0x3FF4400C
 
 void setup() {
@@ -61,28 +60,30 @@ void setup() {
 }
 
 void loop() {
-  // Obtener el puntero al registro de salida GPIO
   volatile uint32_t *gpio_out = (volatile uint32_t *)GPIO_OUT_REG;
 
-  // Activar el bit correspondiente al pin 23 (HIGH)
   *gpio_out |= (1 << LED_BUILTIN);
   digitalWrite(LED_BUILTIN, HIGH);
 
   Serial.println("ON");
   
-  // Esperar el tiempo especificado
   delay(DELAY);
 
-  // Alternar el estado del bit correspondiente al pin 23 (LOW)
   *gpio_out ^= (1 << LED_BUILTIN);
   digitalWrite(LED_BUILTIN, LOW);
 
   Serial.println("OFF");
 
-  // Esperar el tiempo especificado
   delay(DELAY);
 }
 ```
+En este código proporcionado, se ha modificado respecto a los anteriores, para que haga la función de actuar sobre los regsitros de entrada y salida, el código ha sido diseñad con la sugerencias añadidas que hacen referencia a *gpio_out*
+
+
+# 4. Medir frecuencia máxima 
+```
+----Añadir lo del osciloscopio gráfica y comentarla
+
 
 Diagrama codi basic:
 Los diagramas de flujo y estado solo se hacen del código básico
@@ -92,6 +93,3 @@ Los diagramas de flujo y estado solo se hacen del código básico
 ```mermaid
 stateDiagra
 ```
-# 4. Medir frecuencia máxima 
-```
-----Añadir lo del osciloscopio gráfica y comentarla
