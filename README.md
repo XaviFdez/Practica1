@@ -181,30 +181,9 @@ graph TD
 
 ## 5.2- Diagrama de tiempo.
 ```mermaid
-sequenceDiagram
-  participant Programa
-  participant Arduino
-
-  Note over Programa: Inicio del Programa
-
-  Programa->>Arduino: pinMode(LED_BUILTIN, OUTPUT)
-
-  loop LED
-    Programa->>Arduino: digitalWrite(LED_BUILTIN, HIGH)
-    Programa->>Arduino: delay(500)
-    Programa->>Arduino: digitalWrite(LED_BUILTIN, LOW)
-    Programa->>Arduino: delay(500)
-
-  Note over Programa: Repetir bucle LED
-
-  Note over Programa: Fin del Programa
-```
-
-Diagrama codi basic:
-Los diagramas de flujo y estado solo se hacen del código básico
-
-*** Poner en código el código básico que da y el que hay ponerlo aquí
 
 ```mermaid
 stateDiagra
 ```
+
+# 6 - Tiempo libre del procesador
