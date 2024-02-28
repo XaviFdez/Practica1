@@ -180,7 +180,13 @@ graph TD
 ```
 
 ## 5.2- Diagrama de tiempo.
-
+graph TD
+    A[Inicio] -->|Configurar pin| B(Setup: pinMode)
+    B -->|Encender LED| C{¿LED encendido?}
+    C -- Sí --> D[Retardo]
+    D -->|Apagar LED| E
+    E -->|Retardo| C
+    C -- No --> E
 
 Diagrama codi basic:
 Los diagramas de flujo y estado solo se hacen del código básico
