@@ -181,20 +181,34 @@ graph TD
 
 ## 5.2- Diagrama de tiempo.
 ```mermaid
-graph TB
-    subgraph loop
-        A[Setup] --> B[Set pinMode]
-        B --> C[Loop]
-        C --> D[digitalWrite(HIGH)]
-        D --> E[Serial.println("ON")]
-        E --> F[delay(DELAY)]
-        F --> G[digitalWrite(LOW)]
-        G --> H[Serial.println("OFF")]
-        H --> I[delay(DELAY)]
-        I --> C
+
+Lo siento por la confusión anterior. Mermaid no tiene una sintaxis específica para diagramas de tiempo con señales. Sin embargo, puedo proporcionarte una representación simplificada usando el formato de diagrama de secuencia. Ten en cuenta que este formato no es específico para diagramas de tiempo, pero puede ayudarte a visualizar la secuencia de eventos en tu código. Aquí tienes un ejemplo:
+
+mermaid
+Copy code
+sequenceDiagram
+    participant Arduino
+    participant LED
+    participant Serial
+
+    rect rgb(240, 240, 240)
+        Arduino->>Arduino: setup()
     end
-    style A-F fill:#86B342,stroke:#ffffff,stroke-width:2px;
-    style G-I fill:#3498DB,stroke:#ffffff,stroke-width:2px;
+
+    loop Every 2 seconds
+        rect rgb(224, 224, 224)
+            Arduino->>LED: digitalWrite(HIGH)
+            Arduino->>Serial: Serial.println("ON")
+            loop DELAY milliseconds
+                Arduino->>Arduino: delay(DELAY)
+            end
+            Arduino->>LED: digitalWrite(LOW)
+            Arduino->>Serial: Serial.println("OFF")
+            loop DELAY milliseconds
+                Arduino->>Arduino: delay(DELAY)
+            end
+        end
+    end
 ```
 
 # 6 - Tiempo libre del procesador
