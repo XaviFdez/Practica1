@@ -189,11 +189,11 @@ sequenceDiagram
 
   Programa->>Arduino: pinMode(LED_BUILTIN, OUTPUT)
 
-  loop LED:
-  Programa->>Arduino: digitalWrite(LED_BUILTIN, HIGH)
-  Programa->>Arduino: delay(500)
-  Programa->>Arduino: digitalWrite(LED_BUILTIN, LOW)
-  Programa->>Arduino: delay(500)
+  loop LED
+    Programa->>Arduino: digitalWrite(LED_BUILTIN, HIGH)
+    Programa->>Arduino: delay(500)
+    Programa->>Arduino: digitalWrite(LED_BUILTIN, LOW)
+    Programa->>Arduino: delay(500)
 
   Note over Programa: Repetir bucle LED
 
