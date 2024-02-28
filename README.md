@@ -43,7 +43,7 @@ Serial.println("OFF");
 delay(DELAY);
 }
 ```
-En este código modificado hemos añadido los puertos de salida ON y OFF, con las funciones sugeridas en la práctica (Serial.printIN), aparte de esta modificación tambien se ha cambiado el tiempo de espera de 500 a 1000 milisegundos.
+En este código modificado hemos añadido los puertos de salida ON y OFF, con las funciones sugeridas en la práctica (Serial.printIN), aparte de esta modificación tambien se ha cambiado el tiempo de espera del LED de 500 a 1000 milisegundos.
 
 # 3. Modificar programa para que actue en los registros de entrada de salida.
 ```c++
@@ -77,10 +77,14 @@ void loop() {
   delay(DELAY);
 }
 ```
-En este código proporcionado, se ha modificado respecto a los anteriores, para que haga la función de actuar sobre los regsitros de entrada y salida, el código ha sido diseñad con la sugerencias añadidas que hacen referencia a *gpio_out*
+En este código proporcionado, se ha modificado respecto a los anteriores, para que haga la función de actuar sobre los regsitros de entrada y salida, el código ha sido diseñado con las sugerencias añadidas que hacen referencia a *gpio_out*
 
 
 # 4. Medir frecuencia máxima 
+En este cuarto apartado de la práctica modificaremos el Pin de la salida a otro que esté libre i con la ayuda de un osciloscopio mediremos la frecuencia máxima de apagado y encendido que nos marque. 
+Mediremos la frecuencia en 4 ocasiones distintas:
+
+## Medit
 ```
 ----Añadir lo del osciloscopio gráfica y comentarla
 
