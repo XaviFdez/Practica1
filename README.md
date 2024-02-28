@@ -84,8 +84,86 @@ En este código proporcionado, se ha modificado respecto a los anteriores, para 
 En este cuarto apartado de la práctica modificaremos el Pin de la salida a otro que esté libre i con la ayuda de un osciloscopio mediremos la frecuencia máxima de apagado y encendido que nos marque. 
 Mediremos la frecuencia en 4 ocasiones distintas:
 
-## Medit
+## 4.1 Con el envio por puerto série del mensaje y utilizando las funciones del Arduino
+
+```c++
+ #include <Arduino.h>
+
+   int led = 14; 
+
+   void setup() {                
+      pinMode(led, OUTPUT);   
+      Serial.begin(115200);
+   }
+
+   void loop() {
+      Serial.println("ON");
+      digitalWrite(led, HIGH);
+      Serial.println("OFF");      
+      digitalWrite(led, LOW);
+   }
+   ```
+Hemos definido el pin de salida en el pin 14, respecto a la frecuencia registrada en el osciloscopio es de 29.81 Khz.
+
+## 4.2 - Con el envio por puerto série y accedirendo directamente a los registros:
+
+```c++
+ #include <Arduino.h>
+
+   int led = 14;
+   uint32_t *gpio_out = (uint32_t *)GPIO_OUT_REG;
+
+   void setup() {                
+      pinMode(led, OUTPUT);   
+      Serial.begin(115200);
+   }
+
+   void loop() {
+      Serial.println("ON");
+      *gpio_out |= (1 << led);
+      Serial.println("OFF");      
+      *gpio_out ^= (1 << led);
+   }
 ```
+En este caso anterior con le pin de salida en el 14, hay registrada una frecuencia de 29.77 Khz.
+
+## 4.3 - Sin el envio por el puerto série del mensaje i utilizando las funciones de Arduino
+
+```c++
+#include <Arduino.h>
+int led = 14; 
+
+void setup() {                
+   pinMode(led, OUTPUT);   
+}
+
+void loop() {
+   digitalWrite(led, HIGH);
+   digitalWrite(led, LOW);
+}
+```
+En este tercer caso se registra una frecuencia en el osciloscopio de 1.72 Mhz.
+
+## 4.4 - Sin el envio por el puerto série y accedirendo directamente a los registros
+
+```c++
+#include <Arduino.h>
+
+int led = 14; 
+uint32_t *gpio_out = (uint32_t *)GPIO_OUT_REG;
+
+void setup() {                
+   pinMode(led, OUTPUT);   
+}
+
+void loop() {
+   *gpio_out |= (1 << led);
+   *gpio_out ^= (1 << led);
+}
+```
+Y en este último caso se registra una frecuencia de 4.701 Mhz en el osciloscopio.
+
+
 ----Añadir lo del osciloscopio gráfica y comentarla
 
 
