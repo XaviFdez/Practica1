@@ -170,11 +170,11 @@ A continuación se proporciona el diagramas de flujo i el diagrama de tiempo, to
 ## 5.1 - Diagrama de flujo.
 ```mermaid
 graph TD
-    A[Setup] -->|Initialize| B(Setup pinMode)
-    B -->|Set HIGH| C{LED ON?}
-    C -- No --> D[Delay]
-    C -- Yes --> E[Set LOW]
-    E --> F[Delay]
+    A[Inicio] -->|Inicializar| B(Setup: pinMode)
+    B -->|Establecer en ALTO| C{¿LED encendido?}
+    C -- No --> D[Retardo]
+    C -- Sí --> E[Establecer en BAJO]
+    E --> F[Retardo]
     F --> C
 
 ```
