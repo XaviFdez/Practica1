@@ -206,4 +206,6 @@ sequenceDiagram
     end
 ```
 
+EXPLICACION ...___DSAK
+
 # 6 - Tiempo libre del procesador
