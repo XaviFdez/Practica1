@@ -182,24 +182,28 @@ graph TD
 ## 5.2- Diagrama de tiempo.
 ```mermaid
 sequenceDiagram
-  participant Programa
-  participant Arduino
+    participant Arduino
+    participant LED
+    participant Serial
 
-  Note over Programa: Inicio del Programa
+    rect rgb(240, 240, 240)
+        Arduino->>Arduino: setup()
+    end
 
-  Programa->>Arduino: pinMode(LED_BUILTIN, OUTPUT)
-
-  loop LED
-    Programa->>Arduino: digitalWrite(LED_BUILTIN, HIGH)
-    Programa->>Arduino: Serial.println("ON")
-    Programa->>Arduino: delay(500)
-    Programa->>Arduino: digitalWrite(LED_BUILTIN, LOW)
-    Programa->>Arduino: Serial.println("OFF")
-    Programa->>Arduino: delay(500)
-
-    Arduino->>Programa: Tiempo libre del procesador
-
-  Note over Programa: Fin del Programa
+    loop Every 2 seconds
+        rect rgb(224, 224, 224)
+            Arduino->>LED: digitalWrite(HIGH)
+            Arduino->>Serial: Serial.println("ON")
+            loop DELAY milliseconds
+                Arduino->>Arduino: delay(DELAY)
+            end
+            Arduino->>LED: digitalWrite(LOW)
+            Arduino->>Serial: Serial.println("OFF")
+            loop DELAY milliseconds
+                Arduino->>Arduino: delay(DELAY)
+            end
+        end
+    end
 ```
 
 # 6 - Tiempo libre del procesador
