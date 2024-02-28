@@ -170,25 +170,18 @@ A continuación se proporciona el diagramas de flujo i el diagrama de tiempo, to
 ## 5.1 - Diagrama de flujo.
 ```mermaid
 graph TD
-    A[Inicio] -->|Iniciar| B(Inicio pinMode)
-    B -->|Poner en ALTO| C{LED ENCENDIDA}
-    C -- No --> D[Delay]
-    C -- Si --> E[Poner en BAJO]
-    E --> F[Delay]
-    F --> C
-
-```
-
-## 5.2- Diagrama de tiempo.
-```mermaid
-graph TD
   A[Inicio] -->|Inicialización| B(Setup)
   B -->|Establecer modo de salida| C{LED Encendido}
   C -->|Encender LED| D[Delay 500ms]
   D -->|Apagar LED| E{LED Apagado}
   E -->|Delay 500ms| D
   E -->|Repetir| F[Fin]
+
 ```
+
+## 5.2- Diagrama de tiempo.
+```mermaid
+
 
 Diagrama codi basic:
 Los diagramas de flujo y estado solo se hacen del código básico
