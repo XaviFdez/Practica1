@@ -181,21 +181,7 @@ graph TD
 
 ## 5.2- Diagrama de tiempo.
 
-```mermaid
-graph TD
-  A[Inicio] -->|Define LED_BUILTIN| B(#define LED_BUILTIN 2)
-  B -->|Define DELAY| C(#define DELAY 500)
-  C --> D{setup()}
-  D -->|Configura pin| E[ pinMode(LED_BUILTIN, OUTPUT); ]
-  D --> F{loop()}
-  F -->|Enciende LED| G[ digitalWrite(LED_BUILTIN, HIGH); ]
-  G -->|Espera| H[ delay(DELAY); ]
-  H -->|Apaga LED| I[ digitalWrite(LED_BUILTIN, LOW); ]
-  I --> J{Espera}
-  J -->|Espera| K[ delay(DELAY); ]
-  K --> F
-  F -->|Fin| L[Fin]
-```
+
 Diagrama codi basic:
 Los diagramas de flujo y estado solo se hacen del código básico
 
