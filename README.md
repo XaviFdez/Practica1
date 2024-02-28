@@ -163,8 +163,22 @@ void loop() {
 ```
 Y en este último caso se registra una frecuencia de 4.701 Mhz en el osciloscopio.
 
+# 5. Diagrama de flujo i diagrama de tiempo.
 
-----Añadir lo del osciloscopio gráfica y comentarla
+A continuación se proporciona el diagramas de flujo i el diagrama de tiempo, tomando como ejempo el código básico proporcinado en el punto 1 de esta pràctica.
+
+## 5.1 - Diagrama de flujo.
+```mermaid
+graph TD
+    A[Setup] -->|Initialize| B(Setup pinMode)
+    B -->|Set HIGH| C{LED ON?}
+    C -- No --> D[Delay]
+    C -- Yes --> E[Set LOW]
+    E --> F[Delay]
+    F --> C
+```
+
+## 5.2- Diagrama de tiempo.
 
 
 Diagrama codi basic:
