@@ -181,11 +181,6 @@ graph TD
 
 ## 5.2- Diagrama de tiempo.
 ```mermaid
-
-Lo siento por la confusión anterior. Mermaid no tiene una sintaxis específica para diagramas de tiempo con señales. Sin embargo, puedo proporcionarte una representación simplificada usando el formato de diagrama de secuencia. Ten en cuenta que este formato no es específico para diagramas de tiempo, pero puede ayudarte a visualizar la secuencia de eventos en tu código. Aquí tienes un ejemplo:
-
-mermaid
-Copy code
 sequenceDiagram
     participant Arduino
     participant LED
