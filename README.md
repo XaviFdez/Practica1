@@ -173,7 +173,7 @@ graph TD
     A[Inicio] -->|Iniciar| B(Inicio pinMode)
     B -->|Poner en ALTO| C{LED ENCENDIDA}
     C -- No --> D[Delay]
-    C -- Yes --> E[Poner en BAJO]
+    C -- Si --> E[Poner en BAJO]
     E --> F[Delay]
     F --> C
 
