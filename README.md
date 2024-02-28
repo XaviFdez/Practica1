@@ -171,9 +171,9 @@ A continuación se proporciona el diagramas de flujo i el diagrama de tiempo, to
 ```mermaid
 graph TD
     A[Inicio] -->|Iniciar| B(Inicio pinMode)
-    B -->|Set HIGH| C{LED ON?}
+    B -->|Poner en ALTO| C{LED ENCENDIDA}
     C -- No --> D[Delay]
-    C -- Yes --> E[ESTABLECER EN LOW]
+    C -- Yes --> E[Poner en BAJO]
     E --> F[Delay]
     F --> C
 
