@@ -180,7 +180,15 @@ graph TD
 ```
 
 ## 5.2- Diagrama de tiempo.
-
+```mermaid
+graph TD
+  A[Inicio] -->|Inicialización| B(Setup)
+  B -->|Establecer modo de salida| C{LED Encendido}
+  C -->|Encender LED| D[Delay 500ms]
+  D -->|Apagar LED| E{LED Apagado}
+  E -->|Delay 500ms| D
+  E -->|Repetir| F[Fin]
+```
 
 Diagrama codi basic:
 Los diagramas de flujo y estado solo se hacen del código básico
