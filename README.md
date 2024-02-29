@@ -105,7 +105,7 @@ Mediremos la frecuencia en 4 ocasiones distintas:
    ```
 Hemos definido el pin de salida en el pin 14, respecto a la frecuencia registrada en el osciloscopio es de 29.81 Khz.
 
-## 4.2 - Con el envio por puerto série y accedirendo directamente a los registros:
+## 4.2 - Con el envio por puerto série y accediendo directamente a los registros:
 
 ```c++
  #include <Arduino.h>
@@ -165,7 +165,7 @@ Y en este último caso se registra una frecuencia de 4.701 Mhz en el osciloscopi
 
 # 5. Diagrama de flujo i diagrama de tiempo.
 
-A continuación se proporciona el diagramas de flujo i el diagrama de tiempo, tomando como ejempo el código básico proporcinado en el punto 1 de esta pràctica.
+A continuación se proporciona el diagrama de flujo i el diagrama de tiempo, tomando como ejempo el código básico proporcinado en el punto 1 de esta pràctica.
 
 ## 5.1 - Diagrama de flujo.
 ```mermaid
