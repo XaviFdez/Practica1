@@ -77,7 +77,7 @@ void loop() {
   delay(DELAY);
 }
 ```
-En este código proporcionado, se ha modificado respecto a los anteriores, para que haga la función de actuar sobre los regsitros de entrada y salida, el código ha sido diseñado con las sugerencias añadidas que hacen referencia a *gpio_out*
+En este código proporcionado, se ha modificado respecto a los anteriores, para que haga la función de actuar sobre los registros de entrada y salida, el código ha sido diseñado con las sugerencias añadidas que hacen referencia a *gpio_out*
 
 
 # 4. Medir frecuencia máxima 
