@@ -209,7 +209,7 @@ sequenceDiagram
         end
     end
 ```
-
+PONER OTRO DIAGRAMA DE TIEMPO
 ___-----------------------EXPLICACION ...___DSAK
 
 # 6 - Tiempo libre del procesador
