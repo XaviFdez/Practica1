@@ -216,3 +216,9 @@ PONER OTRO DIAGRAMA DE TIEMPO
 ___-----------------------EXPLICACION ...___DSAK
 
 # 6 - Tiempo libre del procesador
+Tomando como ejemplo el programa de código básico con un DELAY de 500 ms.
+El tiempo libre del microprocesador sería de 1000 milisegundos o también se le podría decir de 1 segundo.
+
+Explicación:
+Vemos que el DELAY está definido a 500 milisegundos, esto significa que 500 milisegundos para enceder el Led y otros 500 milisegundos al apagar).
+Llegamos a la conclusión que cada 1 segundo el microprocesador no realiza ninguna tarea mientras enciende y apaga el Led.
