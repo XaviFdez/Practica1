@@ -179,8 +179,11 @@ graph TD
 
 ```
 En el diagrama de flujo se muestra el funcionamiento del codigo
+
   1- Se inicia , se establece el modo de salida.
+
   2- El LED se enciende, pasa el tiempo del DELAY (en este caso he tomado como ejemplo 500ms) y se apaga.
+
   3- Una vez apagado, vuelve a pasar el tiempo del DELAY y en este caso se enciende.
 
 ## 5.2- Diagrama de tiempo.
