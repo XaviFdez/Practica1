@@ -222,3 +222,5 @@ El tiempo libre del microprocesador sería de 1000 milisegundos o también se le
 Explicación:
 Vemos que el DELAY está definido a 500 milisegundos, esto significa que 500 milisegundos para enceder el Led y otros 500 milisegundos al apagar).
 Llegamos a la conclusión que cada 1 segundo el microprocesador no realiza ninguna tarea mientras enciende y apaga el Led.
+
+En el caso de un DELAY de 1000 ms el tiempo libre sería de 2000 ms o 2 segundos.
