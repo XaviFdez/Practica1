@@ -195,12 +195,12 @@ sequenceDiagram
 
     Arduino->>Arduino: #define LED_BUILTIN 2
     Arduino->>Arduino: #define DELAY 500
-    Arduino->>LED: pinMode(LED_BUILTIN, OUTPUT)
+    Arduino->>LED: pinMode(LED_BUILTIN, PUERTO_SALIDA)
 
     loop
-        Arduino->>LED: digitalWrite(LED_BUILTIN, HIGH)
+        Arduino->>LED: digitalWrite(LED_BUILTIN, ENCENDIDO)
         Arduino->>Delay: delay(DELAY)
-        Arduino->>LED: digitalWrite(LED_BUILTIN, LOW)
+        Arduino->>LED: digitalWrite(LED_BUILTIN, APAGADO)
         Arduino->>Delay: delay(DELAY)
     end
 ```
