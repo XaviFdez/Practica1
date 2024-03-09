@@ -3,7 +3,6 @@
 #define LED_BUILTIN 23
 #define DELAY 1000
 
-// Dirección base del registro de salida GPIO (ajusta esto según la documentación de tu placa)
 #define GPIO_OUT_REG 0x3FF4400C
 
 void setup() {
