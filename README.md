@@ -165,7 +165,7 @@ Y en este último caso se registra una frecuencia de 4.701 Mhz en el osciloscopi
 
 # 5. Diagrama de flujo i diagrama de tiempo.
 
-A continuación se proporciona el diagrama de flujo i el diagrama de tiempo, tomando como ejempo el código básico proporcinado en el punto 1 de esta pràctica.
+A continuación se proporciona el diagrama de flujo i el diagrama de tiempos, tomando como ejemplo el código básico proporcionado en el punto 1 de esta pràctica.
 
 ## 5.1 - Diagrama de flujo.
 ```mermaid
