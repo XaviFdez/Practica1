@@ -187,12 +187,27 @@ En el diagrama de flujo se muestra el funcionamiento del codigo
   3- Una vez apagado, vuelve a pasar el tiempo del DELAY y en este caso se enciende.
 
 ## 5.2- Diagrama de tiempo.
-```wavedrom
-{ signal: [
-  { name: "LED", wave: "01..01..01..01", node: "a" },
-  { name: "Serial", wave: "01.......01....", node: "b" },
-  { name: "Delay", wave: "1.0......1.0...", node: "c" }
-]}
+```mermaid
+sequenceDiagram
+    participant Loop
+    participant LED
+    participant Serial
+    participant Delay
+
+    Loop->>Loop: Bucle Infinito
+
+    Loop->>+LED: Encender LED
+    LED->>Serial: ON
+    LED->>Delay: Espera 1000 ms
+    Delay-->>LED: Fin Espera
+    LED->>LED: Apagar LED
+
+    Loop->>+LED: Apagar LED
+    LED->>Serial: OFF
+    LED->>Delay: Espera 1000 ms
+    Delay-->>LED: Fin Espera
+
+    Loop-->>Loop: Fin del Bucle
 ```
 PONER OTRO DIAGRAMA DE TIEMPO
 ___-----------------------EXPLICACION ...___DSAK
