@@ -204,7 +204,7 @@ sequenceDiagram
         Arduino->>Delay: delay(DELAY)
     end
 ```
-
+En este diagrama de tiempos se puede ver 
 
 # 6 - Tiempo libre del procesador
 Tomando como ejemplo el programa de código básico con un DELAY de 500 ms.
