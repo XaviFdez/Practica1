@@ -189,15 +189,17 @@ En el diagrama de flujo se muestra el funcionamiento del codigo
 ## 5.2- Diagrama de tiempo.
 ```mermaid
 sequenceDiagram
-  participant Arduino
+  participant LED
   participant Serial
 
-  Arduino->>Serial: Initialize LED and Serial
+  Note over LED, Serial: Initialization
+
   loop Every 1000ms
-    Arduino->>Serial: Send ON message
-    loop Every 1000ms
-      Arduino->>Serial: Send OFF message
-    end
+    LED->>+Serial: ON
+    Serial-->>-LED: "ON"
+    LED--x 1000ms-->LED: OFF
+    LED->>+Serial: OFF
+    Serial-->>-LED: "OFF"
   end
 ```
 PONER OTRO DIAGRAMA DE TIEMPO
