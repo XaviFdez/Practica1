@@ -193,18 +193,15 @@ sequenceDiagram
     participant LED
     participant Delay
 
+    Arduino->>Arduino: #define LED_BUILTIN 2
+    Arduino->>Arduino: #define DELAY 500
     Arduino->>LED: pinMode(LED_BUILTIN, OUTPUT)
-    
-        Arduino->>LED: digitalWrite(LED_BUILTIN, ENCENDIDO)
-        
-            Arduino->>Delay: delay(DELAY)
-            
-                Arduino->>LED: digitalWrite(LED_BUILTIN, APAGADO)
 
-                    Arduino->>Delay: delay(DELAY)
-                end
-            end
-        end
+    loop
+        Arduino->>LED: digitalWrite(LED_BUILTIN, HIGH)
+        Arduino->>Delay: delay(DELAY)
+        Arduino->>LED: digitalWrite(LED_BUILTIN, LOW)
+        Arduino->>Delay: delay(DELAY)
     end
 ```
 PONER OTRO DIAGRAMA DE TIEMPO
