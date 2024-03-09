@@ -188,7 +188,7 @@ En el diagrama de flujo se muestra el funcionamiento del codigo
 
 ## 5.2- Diagrama de tiempo.
 ```mermaid
-equenceDiagram
+sequenceDiagram
     participant Arduino
     participant LED
     participant Delay
