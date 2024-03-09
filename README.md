@@ -188,26 +188,24 @@ En el diagrama de flujo se muestra el funcionamiento del codigo
 
 ## 5.2- Diagrama de tiempo.
 ```mermaid
-sequenceDiagram
-    participant Loop
+equenceDiagram
+    participant Arduino
     participant LED
-    participant Serial
     participant Delay
 
-    Loop->>Loop: Bucle Infinito
-
-    Loop->>+LED: Encender LED
-    LED->>Serial: ON
-    LED->>Delay: Espera 1000 ms
-    Delay-->>LED: Fin Espera
-    LED->>LED: Apagar LED
-
-    Loop->>+LED: Apagar LED
-    LED->>Serial: OFF
-    LED->>Delay: Espera 1000 ms
-    Delay-->>LED: Fin Espera
-
-    Loop-->>Loop: Fin del Bucle
+    Arduino->>LED: pinMode(LED_BUILTIN, OUTPUT)
+    loop
+        Arduino->>LED: digitalWrite(LED_BUILTIN, HIGH)
+        loop
+            Arduino->>Delay: delay(DELAY)
+            loop
+                Arduino->>LED: digitalWrite(LED_BUILTIN, LOW)
+                loop
+                    Arduino->>Delay: delay(DELAY)
+                end
+            end
+        end
+    end
 ```
 PONER OTRO DIAGRAMA DE TIEMPO
 ___-----------------------EXPLICACION ...___DSAK
