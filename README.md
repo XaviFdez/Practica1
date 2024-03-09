@@ -125,7 +125,7 @@ Hemos definido el pin de salida en el pin 14, respecto a la frecuencia registrad
       *gpio_out ^= (1 << led);
    }
 ```
-En este caso anterior con le pin de salida en el 14, hay registrada una frecuencia de 29.77 Khz.
+En este caso anterior con el pin de salida en el 14, hay registrada una frecuencia de 29.77 Khz.
 
 ## 4.3 - Sin el envio por el puerto série del mensaje i utilizando las funciones de Arduino
 
@@ -165,7 +165,7 @@ Y en este último caso se registra una frecuencia de 4.701 Mhz en el osciloscopi
 
 # 5. Diagrama de flujo i diagrama de tiempo.
 
-A continuación se proporciona el diagrama de flujo i el diagrama de tiempos, tomando como ejemplo el código básico proporcionado en el punto 1 de esta pràctica.
+A continuación se proporciona el diagrama de flujo i el diagrama de tiempos, tomando como ejemplo el código básico proporcionado en el punto 1 de esta práctica.
 
 ## 5.1 - Diagrama de flujo.
 ```mermaid
@@ -178,9 +178,9 @@ graph TD
   E -->|Repetir| F[Fin]
 
 ```
-En el diagrama de flujo se muestra el funcionamiento del codigo
+En el diagrama de flujo se muestra el funcionamiento del codigo:
 
-  1- Se inicia , se establece el modo de salida.
+  1- Se inicia, se establece el modo de salida.
 
   2- El LED se enciende, pasa el tiempo del DELAY (en este caso he tomado como ejemplo 500ms) y se apaga.
 
