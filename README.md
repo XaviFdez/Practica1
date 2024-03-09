@@ -187,24 +187,12 @@ En el diagrama de flujo se muestra el funcionamiento del codigo
   3- Una vez apagado, vuelve a pasar el tiempo del DELAY y en este caso se enciende.
 
 ## 5.2- Diagrama de tiempo.
-```mermaid
-sequenceDiagram
-    participant Arduino
-    participant LED
-    participant Serial
-
-    Note over Arduino, LED: Setup
-    Arduino->>Arduino: pinMode(LED_BUILTIN, OUTPUT)
-
-    loop Every DELAY milliseconds
-    Arduino->>LED: digitalWrite(LED_BUILTIN, HIGH)
-    Arduino->>Serial: Serial.println("ON")
-    LED-->>Arduino: (LED ON)
-    Arduino->>Arduino: delay(DELAY)
-    Arduino->>LED: digitalWrite(LED_BUILTIN, LOW)
-    Arduino->>Serial: Serial.println("OFF")
-    LED-->>Arduino: (LED OFF)
-    Arduino->>Arduino: delay(DELAY)
+```wavedrom
+{ signal: [
+  { name: "LED", wave: "01..01..01..01", node: "a" },
+  { name: "Serial", wave: "01.......01....", node: "b" },
+  { name: "Delay", wave: "1.0......1.0...", node: "c" }
+]}
 ```
 PONER OTRO DIAGRAMA DE TIEMPO
 ___-----------------------EXPLICACION ...___DSAK
