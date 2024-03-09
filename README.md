@@ -77,11 +77,11 @@ void loop() {
   delay(DELAY);
 }
 ```
-En este código proporcionado, se ha modificado respecto a los anteriores, para que haga la función de actuar sobre los registros de entrada y salida, el código ha sido diseñado con las sugerencias añadidas que hacen referencia a *gpio_out*
+En este código proporcionado, se ha modificado respecto a los anteriores, para que haga la función de actuar sobre los registros de entrada y salida, el código ha sido diseñado con las sugerencias añadidas que hacen referencia a **gpio_out**
 
 
 # 4. Medir frecuencia máxima 
-En este cuarto apartado de la práctica modificaremos el Pin de la salida a otro que esté libre i con la ayuda de un osciloscopio mediremos la frecuencia máxima de apagado y encendido que nos marque. 
+En este cuarto apartado de la práctica modificaremos el Pin de la salida a otro que esté libre y con la ayuda de un osciloscopio mediremos la frecuencia máxima de apagado y encendido que nos marque. 
 Mediremos la frecuencia en 4 ocasiones distintas:
 
 ## 4.1 Con el envio por puerto série del mensaje y utilizando las funciones del Arduino
@@ -210,3 +210,5 @@ En este diagrama de tiempos se puede ver el funcionamiento de la práctica, teni
 El tiempo libre que tiene el procesador se puede definir con el siguiente calculo:
 
 **Tiempo libre del procesador = Tiempo total de un ciclo - Tiempo ocupado en ejecución del bucle**
+
+Sabiendo el tiempo total de un ciclo marcado y calculado, con Delay, y sabiendo el tiempo que el procesador está ocupado haciendo la ejecución del bucle, haciendo la resta de estas anteriores, podemos conocer el tiempo libre que tiene el procesador.
