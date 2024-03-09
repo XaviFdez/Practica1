@@ -207,11 +207,6 @@ sequenceDiagram
 En este diagrama de tiempos se puede ver el funcionamiento de la práctica, teniendo como referencia el Arduino, el LED y el tiempo del Delay.
 
 # 6 - Tiempo libre del procesador
-Tomando como ejemplo el programa de código básico con un DELAY de 500 ms.
-El tiempo libre del microprocesador sería de 1000 milisegundos o también se le podría decir de 1 segundo.
+El tiempo libre que tiene el procesador se puede definir con el siguiente calculo:
 
-Explicación:
-Vemos que el DELAY está definido a 500 milisegundos, esto significa que 500 milisegundos para enceder el Led y otros 500 milisegundos al apagar).
-Llegamos a la conclusión que cada 1 segundo el microprocesador no realiza ninguna tarea mientras enciende y apaga el Led.
-
-En el caso de un DELAY de 1000 ms el tiempo libre sería de 2000 ms o 2 segundos.
+**Tiempo libre del procesador = Tiempo total de un ciclo - Tiempo ocupado en ejecución del bucle**
