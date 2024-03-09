@@ -188,18 +188,25 @@ En el diagrama de flujo se muestra el funcionamiento del codigo
 
 ## 5.2- Diagrama de tiempo.
 ```mermaid
-sequenceDiagram
-    participant LED as LED State
-    participant Serial as Serial Output
-
-    Note over LED, Serial: Initialization
-
-    loop Every 1000ms
-        LED->>LED: ON
-        Serial->>Serial: "ON"
-        LED->>LED: OFF
-        Serial->>Serial: "OFF"
-    end
+gantt
+    title Timing Diagram
+    dateFormat  SSS
+    axisFormat  %SSS
+    section LED
+    Initialization            : 0 - 1
+    LED ON                     : 1 - 2
+    Serial Out "ON"            : 1 - 2
+    Delay                       : 2 - 3
+    LED OFF                    : 3 - 4
+    Serial Out "OFF"           : 3 - 4
+    Delay                       : 4 - 5
+    LED ON                     : 5 - 6
+    Serial Out "ON"            : 5 - 6
+    Delay                       : 6 - 7
+    LED OFF                    : 7 - 8
+    Serial Out "OFF"           : 7 - 8
+    Delay                       : 8 - 9
+    ...                         : 9 - 15
 ```
 PONER OTRO DIAGRAMA DE TIEMPO
 ___-----------------------EXPLICACION ...___DSAK
