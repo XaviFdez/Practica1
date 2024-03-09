@@ -194,13 +194,13 @@ sequenceDiagram
     participant Delay
 
     Arduino->>LED: pinMode(LED_BUILTIN, OUTPUT)
-    loop
-        Arduino->>LED: digitalWrite(LED_BUILTIN, HIGH)
-        loop
+    
+        Arduino->>LED: digitalWrite(LED_BUILTIN, ENCENDIDO)
+        
             Arduino->>Delay: delay(DELAY)
-            loop
-                Arduino->>LED: digitalWrite(LED_BUILTIN, LOW)
-                loop
+            
+                Arduino->>LED: digitalWrite(LED_BUILTIN, APAGADO)
+
                     Arduino->>Delay: delay(DELAY)
                 end
             end
