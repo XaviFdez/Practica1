@@ -194,17 +194,17 @@ sequenceDiagram
     participant Serial
 
     Note over Arduino, LED: Setup
-    Arduino->>LED: pinMode(LED_BUILTIN, OUTPUT)
+    Arduino->>Arduino: pinMode(LED_BUILTIN, OUTPUT)
 
     loop Every DELAY milliseconds
     Arduino->>LED: digitalWrite(LED_BUILTIN, HIGH)
     Arduino->>Serial: Serial.println("ON")
     LED-->>Arduino: (LED ON)
-    Arduino->>LED: delay(DELAY)
+    Arduino->>Arduino: delay(DELAY)
     Arduino->>LED: digitalWrite(LED_BUILTIN, LOW)
     Arduino->>Serial: Serial.println("OFF")
     LED-->>Arduino: (LED OFF)
-    Arduino->>LED: delay(DELAY)
+    Arduino->>Arduino: delay(DELAY)
 ```
 PONER OTRO DIAGRAMA DE TIEMPO
 ___-----------------------EXPLICACION ...___DSAK
