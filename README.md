@@ -188,25 +188,23 @@ En el diagrama de flujo se muestra el funcionamiento del codigo
 
 ## 5.2- Diagrama de tiempo.
 ```mermaid
-gantt
-    title Timing Diagram
-    dateFormat  SSS
-    axisFormat  %SSS
-    section LED
-    Initialization            : 0 - 1
-    LED ON                     : 1 - 2
-    Serial Out "ON"            : 1 - 2
-    Delay                       : 2 - 3
-    LED OFF                    : 3 - 4
-    Serial Out "OFF"           : 3 - 4
-    Delay                       : 4 - 5
-    LED ON                     : 5 - 6
-    Serial Out "ON"            : 5 - 6
-    Delay                       : 6 - 7
-    LED OFF                    : 7 - 8
-    Serial Out "OFF"           : 7 - 8
-    Delay                       : 8 - 9
-    ...                         : 9 - 15
+sequenceDiagram
+    participant Arduino
+    participant LED
+    participant Serial
+
+    Note over Arduino, LED: Setup
+    Arduino->>LED: pinMode(LED_BUILTIN, OUTPUT)
+
+    loop Every DELAY milliseconds
+    Arduino->>LED: digitalWrite(LED_BUILTIN, HIGH)
+    Arduino->>Serial: Serial.println("ON")
+    LED-->>Arduino: (LED ON)
+    Arduino->>LED: delay(DELAY)
+    Arduino->>LED: digitalWrite(LED_BUILTIN, LOW)
+    Arduino->>Serial: Serial.println("OFF")
+    LED-->>Arduino: (LED OFF)
+    Arduino->>LED: delay(DELAY)
 ```
 PONER OTRO DIAGRAMA DE TIEMPO
 ___-----------------------EXPLICACION ...___DSAK
